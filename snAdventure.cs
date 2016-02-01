@@ -257,11 +257,26 @@ namespace EK_Sena
                     break;
                 }
             }
-            
 
+            //덱을 해제한 후에 레벨 1짜리를 그 자리에 다시 배치해준다.
+            //if (boolChangeNumber[0] == true) // 1번
+            //{
+            //    bool boolExist;
+            //    // 레벨 1짜리 덱이 남아 있는지 확인
+            //    boolExist = SearchLevel1(intUsedDeck);
+            //    // 30짜리 덱을 선택
+            //    SetCursorPos(171, 179);
+            //    mouse_event(LBDOWN | LBUP, 0, 0, 0, 0);
+            //    Thread.Sleep(1000);
+            //    // 덱을 해제
+            //    SetCursorPos(848, 519);
+            //    mouse_event(LBDOWN | LBUP, 0, 0, 0, 0);
+            //    Thread.Sleep(1000);
+
+            //}
 
             // 게임을 시작한다.
-            
+
 
             Thread.Sleep(1000);
         }
@@ -290,22 +305,7 @@ namespace EK_Sena
                 mouse_event(LBDOWN | LBUP, 0, 0, 0, 0);
             }
 
-            //덱을 해제한 후에 레벨 1짜리를 그 자리에 다시 배치해준다.
-            if (boolChangeNumber[0] == true) // 1번
-            {
-                bool boolExist;
-                // 레벨 1짜리 덱이 남아 있는지 확인
-                boolExist = SearchLevel1(intUsedDeck);
-                // 30짜리 덱을 선택
-                SetCursorPos(171, 179);
-                mouse_event(LBDOWN | LBUP, 0, 0, 0, 0);
-                Thread.Sleep(1000);
-                // 덱을 해제
-                SetCursorPos(848, 519);
-                mouse_event(LBDOWN | LBUP, 0, 0, 0, 0);
-                Thread.Sleep(1000);
-
-            }
+            
         }
 
         private bool SearchLevel1(int Order)
