@@ -32,10 +32,14 @@ namespace EK_Sena
             while (true)
             {
                 clrScreenColor = cs.ScreenColor(659, 515);
-                if ((clrScreenColor.R.ToString() == "46") && (clrScreenColor.G.ToString() == "49") && (clrScreenColor.B.ToString() == "59"))
+                if ((clrScreenColor.R >= (46-5) && clrScreenColor.R <= (46 + 5)) && 
+                    (clrScreenColor.G >= (49-5) && clrScreenColor.G <= (49 + 5)) && 
+                    (clrScreenColor.B >= (59-5) && clrScreenColor.B <= (59 + 5)))
                 {  // 메인화면 1차 검증 작업
                     clrScreenColor = cs.ScreenColor(829, 523);
-                    if ((clrScreenColor.R.ToString() == "76") && (clrScreenColor.G.ToString() == "74") && (clrScreenColor.B.ToString() == "74"))
+                    if ((clrScreenColor.R >= (76-5) && clrScreenColor.R <= (76 + 5)) && 
+                        (clrScreenColor.G >= (74-5) && clrScreenColor.R <= (76 + 5)) && 
+                        (clrScreenColor.B >= (74-5) && clrScreenColor.B <= (74 + 5)))
                     {  // 메인화면 2차 검증 작업 및 전투입장
                         Thread.Sleep(3000);
                         SetCursorPos(707, 528);
@@ -50,10 +54,14 @@ namespace EK_Sena
             while (true)
             {
                 clrScreenColor = cs.ScreenColor(134, 176);
-                if ((clrScreenColor.R.ToString() == "251") && (clrScreenColor.G.ToString() == "210") && (clrScreenColor.B.ToString() == "220"))
+                if ((clrScreenColor.R >= (251-5) && clrScreenColor.R <= (251 + 4)) && 
+                    (clrScreenColor.G >= (210-5) && clrScreenColor.G <= (210 + 5)) && 
+                    (clrScreenColor.B >= (220-5) && clrScreenColor.B <= (220 + 5)))
                 {  // 전투화면 1차 검증 작업
                     clrScreenColor = cs.ScreenColor(621, 147);
-                    if ((clrScreenColor.R.ToString() == "254") && (clrScreenColor.G.ToString() == "253") && (clrScreenColor.B.ToString() == "225"))
+                    if ((clrScreenColor.R >= (25-5) && clrScreenColor.R <= (25+5)) && 
+                        (clrScreenColor.G >= (4-4) && clrScreenColor.G <= (4 + 5)) && 
+                        (clrScreenColor.B >= (4-4) && clrScreenColor.B <= (4 + 5)))
                     {  // 전투화면 2차 검증 작업 및 전투입장
                         Thread.Sleep(3000);
                         SetCursorPos(712, 224);
@@ -100,7 +108,9 @@ namespace EK_Sena
 
             // 결투장 열쇠를 확인한다.
             clrScreenColor = cs.ScreenColor(403, 46);
-            if ((clrScreenColor.R.ToString() == "246") && (clrScreenColor.G.ToString() == "8") && (clrScreenColor.B.ToString() == "0"))
+            if ((clrScreenColor.R >= (246-5) && clrScreenColor.R <= (246 + 5)) && 
+                (clrScreenColor.G >= (8-5) && clrScreenColor.G <= (8 + 5)) && 
+                (clrScreenColor.B >= 0 && clrScreenColor.B <= (0 + 5)))
             {  // 열쇠가 있으면.. 플레이어 스킬 설정
                 // 준비하기 접속
                 SetCursorPos(748, 532);
@@ -142,10 +152,14 @@ namespace EK_Sena
             {
                 Thread.Sleep(5000);
                 clrScreenColor = cs.ScreenColor(93, 475);
-                if ((clrScreenColor.R.ToString() == "255") && (clrScreenColor.G.ToString() == "255") && (clrScreenColor.B.ToString() == "255"))
+                if ((clrScreenColor.R >= (255-5) && clrScreenColor.R <= 255) && 
+                    (clrScreenColor.G >= (255-5) && clrScreenColor.G <= 255) && 
+                    (clrScreenColor.B >= (255-5) && clrScreenColor.B <= 255))
                 {  // 메인화면 1차 검증 작업
                     clrScreenColor = cs.ScreenColor(98, 567);
-                    if ((clrScreenColor.R.ToString() == "255") && (clrScreenColor.G.ToString() == "255") && (clrScreenColor.B.ToString() == "255"))
+                    if ((clrScreenColor.R >= (255-5) && clrScreenColor.R <= 255) && 
+                        (clrScreenColor.G >= (255-5) && clrScreenColor.G <= 255) && 
+                        (clrScreenColor.B >= (255-5) && clrScreenColor.B <= 255))
                     {  // 메인화면 2차 검증 작업 및 전투입장
                         Thread.Sleep(1000);
                         SetCursorPos(905, 398);

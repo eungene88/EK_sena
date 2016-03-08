@@ -32,14 +32,18 @@ namespace EK_Sena
 
             bool boolSwitchFight = false; ;
 
-            // 메인화면을 확인한다.
+            // 메인화면인지 확인한다.
             while (true)
             {
                 clrScreenColor = cs.ScreenColor(659, 515);
-                if ((clrScreenColor.R.ToString() == "46") && (clrScreenColor.G.ToString() == "49") && (clrScreenColor.B.ToString() == "59"))
+                if ((clrScreenColor.R >= (46 - 5) && clrScreenColor.R <= (46 + 5)) &&
+                    (clrScreenColor.G >= (49 - 5) && clrScreenColor.G <= (49 + 5)) &&
+                    (clrScreenColor.B >= (59 - 5) && clrScreenColor.B <= (59 + 5)))
                 {  // 메인화면 1차 검증 작업
                     clrScreenColor = cs.ScreenColor(829, 523);
-                    if ((clrScreenColor.R.ToString() == "76") && (clrScreenColor.G.ToString() == "74") && (clrScreenColor.B.ToString() == "74"))
+                    if ((clrScreenColor.R >= (76 - 5) && clrScreenColor.R <= (76 + 5)) &&
+                        (clrScreenColor.G >= (74 - 5) && clrScreenColor.R <= (76 + 5)) &&
+                        (clrScreenColor.B >= (74 - 5) && clrScreenColor.B <= (74 + 5)))
                     {  // 메인화면 2차 검증 작업 및 전투입장
                         Thread.Sleep(3000);
                         SetCursorPos(707, 528);
@@ -54,14 +58,18 @@ namespace EK_Sena
             while (true)
             {
                 clrScreenColor = cs.ScreenColor(134, 176);
-                if ((clrScreenColor.R.ToString() == "251") && (clrScreenColor.G.ToString() == "210") && (clrScreenColor.B.ToString() == "220"))
-                {  // 메인화면 1차 검증 작업
+                if ((clrScreenColor.R >= (251 - 5) && clrScreenColor.R <= (251 + 4)) &&
+                    (clrScreenColor.G >= (210 - 5) && clrScreenColor.G <= (210 + 5)) &&
+                    (clrScreenColor.B >= (220 - 5) && clrScreenColor.B <= (220 + 5)))
+                {  // 전투화면 1차 검증 작업
                     clrScreenColor = cs.ScreenColor(621, 147);
-                    if ((clrScreenColor.R.ToString() == "254") && (clrScreenColor.G.ToString() == "253") && (clrScreenColor.B.ToString() == "225"))
-                    {  // 메인화면 2차 검증 작업 및 전투입장
+                    if ((clrScreenColor.R >= (25 - 5) && clrScreenColor.R <= (25 + 5)) &&
+                        (clrScreenColor.G >= (4 - 4) && clrScreenColor.G <= (4 + 5)) &&
+                        (clrScreenColor.B >= (4 - 4) && clrScreenColor.B <= (4 + 5)))
+                    {  // 전투화면 2차 검증 작업 및 전투입장
                         Thread.Sleep(3000);
-                        SetCursorPos(254, 218);
-                        mouse_event(LBDOWN | LBUP, 254, 218, 0, 0);
+                        SetCursorPos(175, 218);
+                        mouse_event(LBDOWN | LBUP, 175, 218, 0, 0);
                         break;
                     }
                 }
@@ -105,10 +113,14 @@ namespace EK_Sena
             {
                 Thread.Sleep(5000);
                 clrScreenColor = cs.ScreenColor(440, 362);
-                if ((clrScreenColor.R.ToString() == "255") && (clrScreenColor.G.ToString() == "129") && (clrScreenColor.B.ToString() == "54"))
+                if ((clrScreenColor.R >= (255-5) && clrScreenColor.R <= 255) && 
+                    (clrScreenColor.G >= (129-5) && clrScreenColor.G <= (129 + 5)) && 
+                    (clrScreenColor.B >= (54-5) && clrScreenColor.B <= (54 + 5)))
                 {  // 메인화면 1차 검증 작업
                     clrScreenColor = cs.ScreenColor(406, 426);
-                    if ((clrScreenColor.R.ToString() == "252") && (clrScreenColor.G.ToString() == "182") && (clrScreenColor.B.ToString() == "19"))
+                    if ((clrScreenColor.R >= (252-5) && clrScreenColor.R <= (252 + 3)) && 
+                        (clrScreenColor.G >= (182-5) && clrScreenColor.G <= (182 + 5)) && 
+                        (clrScreenColor.B >= (19-5) && clrScreenColor.B <= (19 + 5)))
                     {  // 메인화면 2차 검증 작업 및 전투입장
                         Thread.Sleep(1000);
                         SetCursorPos(905, 398);
@@ -129,7 +141,9 @@ namespace EK_Sena
             Thread.Sleep(4000);
             // 결투장 열쇠를 확인한다.
             clrScreenColor = cs.ScreenColor(377, 56);
-            if ((clrScreenColor.R.ToString() == "172") && (clrScreenColor.G.ToString() == "171") && (clrScreenColor.B.ToString() == "209"))
+            if ((clrScreenColor.R >= (172-5) && clrScreenColor.R <= (172 + 5)) && 
+                (clrScreenColor.G >= (171-5) && clrScreenColor.G <= (171 + 5)) && 
+                (clrScreenColor.B >= (209-5) && clrScreenColor.B <= (209 + 5)))
             {  // 열쇠가 있으면.. 플레이어 스킬 설정
                 // 준비하기 접속
                 SetCursorPos(907, 517);
